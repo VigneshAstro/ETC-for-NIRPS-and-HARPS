@@ -23,7 +23,7 @@ Running the code:
 In terminal:
 python ETC_HARPS_NIRPS.py 
 
-Using iPython 
+Using iPython (Jupyter Notebook)
 run ETC_HARPS_NIRPS.py 
 
 The code asks few parameters from the user:
@@ -69,6 +69,8 @@ name = 'name of the planet'
 
 T = star temperature in K
 
+T_marcs = Star temperature to fit the MARCS model for SED.
+
 magband = 'Magnitude band name: Eg: J' Here J band is fixed as it is ideal in NIR (For NIRPS)
 
 mag = magnitude value of J band
@@ -88,6 +90,10 @@ nirps = 'he/ha mode'
 R_rat = radius ratio of planet to star
 
 M_s = mass of star in solar masses
+
+log_g = acceleration due to gravity of the star log10 (cm/s2)
+
+log_g_marcs = acceleration due to gravity of star to fit the MARCS model of SED.
 
 Vsys = radial velocity of the system in km/s
 
@@ -114,51 +120,61 @@ calc_pb = Y/N for calculation of planetary blur
 
 Example of filled input_file.txt is shown below.
 
-name = 'WASP-127 b'
+name = 'WASP-121 b'
 
-T = 5620.0
+T = 6776.0
+
+T_marcs = 6750
 
 magband = 'J'
 
-mag = 6.591
+mag = 9.625
 
-Vmag = 7.65
+Vmag = 10.514
 
-Imag = 7.1134829731745395
+Imag = 10.15
 
 airmass = 1.2
 
 pwv = 2.5
 
-harps = 'ham'
+see = 30
 
-nirps = 'he'
+harps = 'eggs'
 
-R_rat = 0.10103
+nirps = 'ha'
 
-M_s = 0.95
+R_s = 1.46
 
-Vsys = -8.25
+R_rat = 0.12355
 
-R_p = 1.311
+M_s = 1.36
 
-M_p = 0.1647
+log_g = 4.24
 
-inc = 87.84
+log_g_marcs = 4.0
 
-mpsini = 0.1647
+Vsys = 38.35
 
-w = 0
+R_p = 1.753
 
-P = 4.17806203
+M_p = 1.157
 
-a = 0.0484
+inc = 88.49
+
+mpsini = 1.157
+
+w = 10.0
+
+P = 1.27492504
+
+a = 0.02596
 
 ecc = 0
 
-b = 0.29
+b = 0.1
 
-T0 = 2456776.62124
+T0 = 2458119.72074
 
 calc_pb = 'Y'
 
@@ -172,7 +188,11 @@ The output files are stored in Outputs folder with a sub-folder for the planet n
 
 Other details:
 
-In the file ETC_HARPS_NIRPS.py, you can change the upper-limit (or lower-limit) in the exposure time calculator by changing the line: exp = np.arange(0, 1500, 60). The calculations for Planetary Blur can also be edited in the file blur_cal.py
+1. If the stellar radius is not known, it is assumed as 1 solar radius.
+
+2. The I-mag is calculated from the relation in: https://www.pas.rochester.edu/~emamajek/EEM_dwarf_UBVIJHK_colors_Teff.txt
+
+3. In the file ETC_HARPS_NIRPS.py, you can change the upper-limit (or lower-limit) in the exposure time calculator by changing the line: exp = np.arange(0, 1500, 60). The calculations for Planetary Blur can also be edited in the file blur_cal.py
 
 More help on ExoFIle: https://github.com/AntoineDarveau/exofile
 More help on ESO ETC 2.0 files: https://etc.eso.org/observing/etc/home search tools.
