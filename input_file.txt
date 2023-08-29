@@ -1,0 +1,16 @@
+name = 'WASP-121'
+T = 6776.0
+T_marcs = 6750
+log_g = 4.24
+log_g_marcs = 4.0
+magband = 'J'
+mag = 9.625
+Vmag = 10.514
+Imag = 10.15
+airmass = 1.2
+pwv = 2.5
+see = 30
+harps = 'ham'
+nirps = 'he'
+Vsys = 38.35
+calc_pb = 'N'
