@@ -11,11 +11,16 @@ Steps:
 To run the simulation, follow the following steps:
 
 1. First we need to install standard astronomy packages:
+   
    1.1. numpy Version 1.24.3 or higher
+   
    1.2. astroquery Version 0.4.6 or higher
+
    1.3. matplotlib Version 3.7.2 or higher
+
    1.4. scipy Version 1.10.1 or higher
-2. Download the files from this github repository.
+   
+2. Download the files from this github repository.   
 3. We need to install ExoFile from Antoine Darveau's GitHub: https://github.com/AntoineDarveau/exofile in the same folder (working directory) where you are downloading these files.
 4. That folder in this working directory should be named exofile. 
 
