@@ -254,8 +254,6 @@ input_file.txt
 
 read_input_file.py
 
-readme.txt
-
 rv_calculator.py
 
 
