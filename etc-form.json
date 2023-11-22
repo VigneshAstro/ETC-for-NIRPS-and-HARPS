@@ -1,0 +1,105 @@
+{
+  "application": {
+    "executiondate": "2023-10-05T00:38:05.977Z",
+    "version": "P113",
+    "instrument": "nirps"
+  },
+  "target": {
+    "morphology": {
+      "morphologytype": "point"
+    },
+    "sed": {
+      "sedtype": "spectrum",
+      "spectrum": {
+        "spectrumtype": "template",
+        "params": {
+          "ctlg": "MARCS",
+          "objtype": "star",
+          "spectype": "p4250:g+4.5:m0.0:t02:st:z+0.00:a+0.00:c+0.00:n+0.00:o+0.00"
+        }
+      }
+    },
+    "brightness": {
+      "brightnesstype": "mag",
+      "params": {
+        "magband": "H",
+        "mag": 7.379,
+        "magsys": "vega"
+      }
+    }
+  },
+  "seeingiqao": {
+    "mode": "aongs",
+    "params": {
+      "turbulence_category": 30,
+      "gsmag": 8.81
+    },
+    "aperturepix": 7
+  },
+  "timesnr": {
+    "mode": "nexp",
+    "DET1.WIN1.UIT1": 1500,
+    "SEQ.NEXPO": 1
+  },
+  "sky": {
+    "airmass": 1.2,
+    "moon_fli": 0.5,
+    "pwv": 2.5
+  },
+  "instrument": {
+    "harps": {
+      "mode": "ham",
+      "order": [
+        111
+      ],
+      "isActive": true,
+      "detectorMode": "fast"
+    },
+    "nirps": {
+      "mode": "he",
+      "order": [
+        134,
+        119,
+        89
+      ],
+      "isActive": true
+    },
+    "driver": "nirps"
+  },
+  "output": {
+    "throughput": {
+      "atmosphere": false,
+      "telescope": false,
+      "instrument": false,
+      "blaze": false,
+      "fibinj": false,
+      "detector": false,
+      "totalinclsky": false
+    },
+    "snr": {
+      "snr": true,
+      "noise_components": false
+    },
+    "sed": {
+      "target": false,
+      "sky": false
+    },
+    "signals": {
+      "obstarget": false,
+      "obssky": false,
+      "obstotal": false
+    },
+    "maxsignals": {
+      "maxpixeltarget": false,
+      "maxpixelsky": false,
+      "maxpixeltotal": false
+    },
+    "dispersion": {
+      "dispersion": false
+    },
+    "maxSignals": {
+      "snr": true,
+      "noise_components": false
+    }
+  }
+}
